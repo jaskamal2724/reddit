@@ -10,7 +10,7 @@ interface CreatePostPageProps {
 }
 
 export default async function CreatePostPage({ params }: CreatePostPageProps) {
-  const { userId } = auth()
+  const { userId } = await auth()
   const { slug } = params
 
   if (!userId) {
